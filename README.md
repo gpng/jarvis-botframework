@@ -5,13 +5,13 @@ Proof of concept chatbot with FAQ and helpdesk functions
 ## Installation
 
 1. Install NodeJS with NPM
-'sudo apt-get install nodejs'
+`sudo apt-get install nodejs`
 2. Install dependancies
-'''
+```
 npm install botbuilder
 npm install botbuilder-cognitiveservices
 npm install restify
-'''
+```
 3. Install [Bot Framework Channel Emulator](https://docs.botframework.com/en-us/tools/bot-framework-emulator/)
 
 ## Usage
