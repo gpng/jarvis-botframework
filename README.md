@@ -5,7 +5,9 @@ Proof of concept chatbot with FAQ and helpdesk functions
 ## Installation
 
 1. Install NodeJS with NPM
-`sudo apt-get install nodejs`
+```
+sudo apt-get install nodejs
+```
 2. Install dependancies
 ```
 npm install botbuilder
@@ -17,8 +19,10 @@ npm install restify
 ## Usage
 
 1. Run the restify server hosting the bot which listens to port 3978
-'node app.js'
-2. Start the Bot Framework Channel Emulator and use endpoint URL 'http://localhost:3978/api/messages' with no App ID or Password
+```
+node app.js
+```
+2. Start the Bot Framework Channel Emulator and use endpoint URL `http://localhost:3978/api/messages` with no App ID or Password
 3. Connect and start chatting
 
 ## Contributing
