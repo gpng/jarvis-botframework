@@ -27,6 +27,7 @@ server.post('/api/messages', connector.listen());
 
 var intents = new builder.IntentDialog();
 
+// Setup link to QnA maker
 var recognizer = new cognitiveservices.QnAMakerRecognizer({
 	knowledgeBaseId: 'd9aed820-0da3-4755-9ad9-fc3303c09f5e',
 	subscriptionKey: '37829f054b1d4a309cd71e33e2848108'
@@ -38,6 +39,7 @@ var basicQnAMakerDialog = new cognitiveservices.QnAMakerDialog({
 	qnaThreshold: 0.3
 });
 
+// Detecting intents: FAQ vs helpdesk
 bot.dialog('/', intents);
 
 intents.onDefault([
@@ -67,6 +69,8 @@ intents.matches(/^helpdesk/i, [
 
 bot.dialog('/faq', basicQnAMakerDialog);
 
+// Hardcoded helpdesk flow with JSON case details as output
+// TODO: troublshooting + case details flow should be imported from external files (not hardcoded)
 bot.dialog('/helpdesk', [
 	function (session) {
 		builder.Prompts.text(session, 'Hi! What do you need help with?');
