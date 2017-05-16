@@ -10,9 +10,7 @@ sudo apt-get install nodejs
 ```
 2. Install dependancies
 ```
-npm install botbuilder
-npm install botbuilder-cognitiveservices
-npm install restify
+npm install botbuilder botbuilder-cognitiveservices restify mssql
 ```
 3. Install [Bot Framework Channel Emulator](https://docs.botframework.com/en-us/tools/bot-framework-emulator/)
 
