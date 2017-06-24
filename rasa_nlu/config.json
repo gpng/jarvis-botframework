@@ -1,0 +1,7 @@
+{
+	"pipeline": ["nlp_mitie", "tokenizer_mitie", "ner_mitie", "ner_synonyms", "intent_featurizer_mitie", "intent_classifier_sklearn"],
+	"mitie_file": "./data/total_word_feature_extractor.dat",
+	"path": "./models",
+	"data": "./data/jarvis_testdata_5.json",
+	"emulate": "luis"
+}

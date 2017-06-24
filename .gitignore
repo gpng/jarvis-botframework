@@ -1,1 +1,3 @@
 node_modules/
+rasa_nlu/logs/
+rasa_nlu/data/total_word_feature_extractor.dat

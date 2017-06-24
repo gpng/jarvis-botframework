@@ -50,64 +50,8 @@ var basicQnAMakerDialog = new cognitiveservices.QnAMakerDialog({
 });
 
 // Detecting intents: FAQ vs helpdesk vs forex
-bot.dialog('/', getIntentSQL);
+bot.dialog('/', sqlGetIntent);
 
-function getIntentSQL(session) {
-	var msg = session.message.text;
-	sqlIntentCount(function(err, result) {
-		if (err) { console.log(err); return; }
-
-		var matched = 0;	
-		for ( var i = 0; i < result.length; i++ ) {
-			if (msg.match(RegExp(result[i].pattern, 'i'))) matched = i;
-		}
-		console.log('match: ' + matched);
-		console.log(result[matched]);
-		session.beginDialog(result[matched].intent);
-	});
-	
-	
-}
-
-/*
-intents.onDefault([
-	function (session) {
-		builder.Prompts.text(session, 'Choose to use FAQ or helpdesk');
-	},
-	function (session, results) {
-		if (results.response == 'hi') {
-			session.send('please work');
-		}
-	}
-
-]);
-*/
-/*
-intents.matches(/^faq/i, [
-	function(session){
-		builder.Prompts.text(session, 'Hi! Please enter your question');
-	},
-	function (session) {
-		session.beginDialog('/faq');
-		session.endDialog();
-	},
-	function (session) {
-		session.endDialog();
-	}
-]);
-
-intents.matches(/^helpdesk/i, [
-	function (session) {
-		session.beginDialog('/helpdesk');
-	}
-]);
-
-intents.matches(/^forex/i, [
-	function (session) {
-		session.beginDialog('/forex');
-	}
-]);
-*/
 
 //---------------------
 // Bot Dialogs
@@ -184,7 +128,7 @@ function ocbcForexRequest() {
 	});
 }
 
-var sqlIntentCount = function (fn) {
+var sqlIntent = function (fn) {
 	var pool = new sql.ConnectionPool(dbConfig, function (err) {
 		if (err) { console.log(err); return; }
 
@@ -203,3 +147,19 @@ var sqlIntentCount = function (fn) {
 		});
 	});
 };
+
+function sqlGetIntent(session) {
+	var msg = session.message.text;
+	sqlIntent(function(err, result) {
+		if (err) { console.log(err); return; }
+
+		var matched = 0;	
+		for ( var i = 0; i < result.length; i++ ) {
+			if (msg.match(RegExp(result[i].pattern, 'i'))) matched = i;
+		}
+		console.log('match: ' + matched);
+		console.log(result[matched]);
+		session.beginDialog(result[matched].intent);
+	});
+}
+

@@ -2,6 +2,7 @@ var restify = require('restify');
 var builder = require('botbuilder');
 var cognitiveservices = require('botbuilder-cognitiveservices');
 var fs = require('fs');
+var request = require('request');
 
 //---------------------------
 // Bot Setup
@@ -39,7 +40,7 @@ var basicQnAMakerDialog = new cognitiveservices.QnAMakerDialog({
 	qnaThreshold: 0.3
 });
 
-// Detecting intents: FAQ vs helpdesk
+// Detecting intents: FAQ vs helpdesk vs forex
 bot.dialog('/', intents);
 
 intents.onDefault([
@@ -67,7 +68,25 @@ intents.matches(/^helpdesk/i, [
 	}
 ]);
 
+intents.matches(/^forex/i, [
+	function (session) {
+		session.beginDialog('/forex');
+	}
+]);
+
 bot.dialog('/faq', basicQnAMakerDialog);
+
+bot.dialog('/forex', [
+	function(session) {
+		builder.Prompts.text(session, 'Querying OCBC Forex API... Please be patient');
+		var apiResponse = ocbcForexRequest();
+		
+		console.log(apiResponse);
+	},
+	function (session) {
+		session.endDialog();
+	}
+]);
 
 // Hardcoded helpdesk flow with JSON case details as output
 // TODO: troublshooting + case details flow should be imported from external files (not hardcoded)
@@ -107,3 +126,22 @@ bot.dialog('/helpdesk', [
 		session.endDialog();
 	}
 ]);
+
+//-------------------
+// Functions
+// ------------------
+
+function ocbcForexRequest() {
+	var url = 'https://api.ocbc.com:8243/Forex/1.0';
+	var headers = {
+		"Accept": "application/json",
+		"Authorization": "Bearer 0cca39e95fd1de76fb875dc48dadf6de"
+	};
+	console.log('querying ocbc forex api...');
+	request({"url": url, "headers": headers}, function (err, httpResponse, body) {
+		if (!err) {
+			return body;
+		}
+	});
+}
+

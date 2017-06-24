@@ -10,6 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "botbuilder": "^3.7.0",
+    "mssql": "^4.0.4",
+    "request": "^2.81.0",
     "restify": "^4.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpng/jarvis-botframework.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/gpng/jarvis-botframework/issues"
+  },
+  "homepage": "https://github.com/gpng/jarvis-botframework#readme"
 }

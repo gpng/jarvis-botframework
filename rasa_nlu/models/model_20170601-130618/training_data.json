@@ -1,0 +1,428 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "my outlook cannot start", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "outlook error", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "Cannot start Microsoft Outlook. Cannot open the Outlook window. The set of folders cannot be opened.", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "Cannot start Microsoft Outlook", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "Cannot open the Outlook window", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "how to record phone greeting", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "phone greeting", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "record greeting", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "how to check voicemail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "voicemail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "voice mail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "how to check for common mailbox or distribution list owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "common mailbox owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "distribution list owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "how to configure or map network printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "how to map printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "printer setup", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "printer configuration", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "printer server", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "how to unlock account", 
+        "intent": "ss_account_change", 
+        "entities": []
+      }, 
+      {
+        "text": "account is locked out", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "account locked", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "how to change account password", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "change password", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "can unlock account for me anot?", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "i want to unlock account", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "i want to unlock my account", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "unlock my account please", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "can unlock my account please?", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "please unlock my account", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "please unlock my account for me", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "unlock my account for me", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "unlock my account for me now", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "unlock my account for me NAO", 
+        "intent": "ss_account_unlock", 
+        "entities": []
+      }, 
+      {
+        "text": "i got outlook error please help", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "please help outlook error", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "my outlook cannot open", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "my outlook cannot open how???", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "please help me open my outlook", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "i need help opening my outlook", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "how to open outlook?", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "my outlook not working", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "my outlook not working help please", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "please resolve my outlook error", 
+        "intent": "ss_cannot_start_outlook", 
+        "entities": []
+      }, 
+      {
+        "text": "please teach me how to record a greeting on phone", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "how can i record a greeting on phone", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "what should i do to record a greeting on phone", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "i want to record a greeting on phone", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "record a greeting on phone, i want", 
+        "intent": "ss_phone_record_greeting", 
+        "entities": []
+      }, 
+      {
+        "text": "how can i check my voicemail?", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "how can i check my voice message?", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "please i wanna check voicemail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "please i wanna check voice messages", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "please help me to access my voicemail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "please help me to access my voice messages", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "help me to access my voicemail please", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "help me to access my voice messages please", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "i want to open voicemail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "i want to open voice message", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "how to open voicemail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "how to open voice message", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "give me access to my voicemail", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "give me access to my voice messages", 
+        "intent": "ss_phone_check_voicemail", 
+        "entities": []
+      }, 
+      {
+        "text": "please help me to find mailbox or distribution list owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "please help me to find mailbox owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "please help me to find distribution list owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "please show me my mailbox or distribution list owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "please show me my mailbox owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "please show me my distribution list owner", 
+        "intent": "ss_mail_mailbox_owner", 
+        "entities": []
+      }, 
+      {
+        "text": "show me how to setup network printer please", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "please show me how to set up network printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "i need to know how to set up network printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "what are the steps to set up network printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": " want to set up network printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "how can i set up network printer", 
+        "intent": "ss_printer_setup", 
+        "entities": []
+      }, 
+      {
+        "text": "show me how to change password", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "show me how to change pw", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "i wanna change pw", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "i want to change password", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "how to change pw", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "how to change password", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "change password guide", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }, 
+      {
+        "text": "change pw steps", 
+        "intent": "ss_account_change_password", 
+        "entities": []
+      }
+    ], 
+    "entity_examples": [], 
+    "intent_examples": []
+  }
+}
