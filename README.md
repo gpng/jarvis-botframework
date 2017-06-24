@@ -30,7 +30,7 @@ npm install --save restify botbuilder request mssql
 
 ### rasa NLU setup
 
-All commands are run in rasa_nlu/ dir
+All commands are run in rasa_nlu/
 
 1. Create training data using [rasa-nlu-trainer](https://github.com/RasaHQ/rasa-nlu-trainer) or use current training data in rasa_nlu/data. 
 
@@ -46,6 +46,12 @@ A new dir will be created called something like models/model_YYYYMMDD-HHMMSS
 ```
 python -m rasa_nlu.server -c config.json --server_model_dirs=./model_YYYYMMDD-HHMMSS
 ```
+
+### SQL setup
+
+1. Create a local or remote SQL server and edit dbConfig in app-rasa.js (TODO: bring DB config settings out of app-rasa.js)
+
+2. Table used is tbl_dialog. Use script.sql to create table and insert sample self service steps
 
 ### chatbot setup
 
