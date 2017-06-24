@@ -22,17 +22,40 @@ npm install --save restify botbuilder request mssql
 
 3. Install [Bot Framework Channel Emulator](https://docs.botframework.com/en-us/tools/bot-framework-emulator/)
 
-4. Install [rasa_nlu](https://rasa-nlu.readthedocs.io/en/latest/installation.html) with sklearn + MITIE (option 3)
+4. Install [rasa NLU](https://rasa-nlu.readthedocs.io/en/latest/installation.html) with sklearn + MITIE (option 3)
 
 5. Install and setup [MS SQL](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express)
 
 ## Usage
 
+### rasa NLU setup
+
+All commands are run in rasa_nlu/ dir
+
+1. Create training data using [rasa-nlu-trainer](https://github.com/RasaHQ/rasa-nlu-trainer) or use current training data in rasa_nlu/data. 
+
+2. Update config.json with training data name under "data"
+
+3. Train a model using 
+```
+python -m rasa_nlu.train -c config.json
+```
+A new dir will be created called something like models/model_YYYYMMDD-HHMMSS
+
+4. Run the python server with the trained model
+```
+python -m rasa_nlu.server -c config.json --server_model_dirs=./model_YYYYMMDD-HHMMSS
+```
+
+### chatbot setup
+
 1. Run the restify server hosting the bot which listens to port 3978
 ```
-node app.js
+node app-rasa.js
 ```
+
 2. Start the Bot Framework Channel Emulator and use endpoint URL `http://localhost:3978/api/messages` with no App ID or Password
+
 3. Connect and start chatting
 
 ## Contributing
