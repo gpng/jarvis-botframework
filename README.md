@@ -20,11 +20,11 @@ Alternatively:
 npm install --save restify botbuilder request mssql 
 ```
 
-3. Install [Bot Framework Channel Emulator](https://docs.botframework.com/en-us/tools/bot-framework-emulator/)
+4. Install [Bot Framework Channel Emulator](https://docs.botframework.com/en-us/tools/bot-framework-emulator/)
 
-4. Install [rasa NLU](https://rasa-nlu.readthedocs.io/en/latest/installation.html) with sklearn + MITIE (option 3)
+5. Install [rasa NLU](https://rasa-nlu.readthedocs.io/en/latest/installation.html) with sklearn + MITIE (option 3)
 
-5. Install and setup [MS SQL](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express)
+6. Install and setup [MS SQL](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express)
 
 ## Usage
 
