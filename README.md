@@ -3,16 +3,28 @@
 Proof of concept chatbot with FAQ and helpdesk functions
 
 ## Installation
+1. Clone this repo
 
-1. Install NodeJS with NPM
+2. Install NodeJS with NPM
 ```
 sudo apt-get install nodejs
 ```
-2. Install dependancies
+3. Install dependancies
+Using package.json:
 ```
-npm install botbuilder botbuilder-cognitiveservices restify mssql
+npm install
 ```
+
+Alternatively:
+```
+npm install --save restify botbuilder request mssql 
+```
+
 3. Install [Bot Framework Channel Emulator](https://docs.botframework.com/en-us/tools/bot-framework-emulator/)
+
+4. Install [rasa_nlu](https://rasa-nlu.readthedocs.io/en/latest/installation.html) with sklearn + MITIE (option 3)
+
+5. Install and setup [MS SQL](https://www.microsoft.com/en-us/sql-server/sql-server-editions-express)
 
 ## Usage
 
